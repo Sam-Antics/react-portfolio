@@ -1,0 +1,246 @@
+/* overriding HTML defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-text: rgb(7, 126, 136);
+    --other-text: rgb(2, 9, 11);
+    --bg-one: rgb(117, 75, 111);
+    --bg-two: rgb(211, 215, 218);
+    --color-three: rgb(40, 20, 48);
+}
+
+body {
+    color: var(--main-text);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* applying styles to header/nav bar & footer */
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 35px;
+    background-color: var(--bg-one);
+    top: 0;
+    background-image: url(../images/Purple\ Glitter.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 3em;
+    color: var(--color-three);
+    margin: 0;
+    text-align: start;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--color-three);
+}
+
+header nav {
+    margin: 10px;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 1.5em;
+    border-bottom: 2px solid;
+}
+
+/* Main Content Styles */
+main {
+    background-color: var(--bg-two);
+}
+
+section {
+padding: 10px;
+}
+
+/* Jumbotron styles */
+.hero {
+    color: var(--main-text);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+    background-image: url(../images/Purple\ Glitter.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+}
+
+/* profile pic */
+.hero img {
+    height: 200px;
+    width: 175px;
+    border: 4px var(--bg-two) solid;
+    border-radius: 25px;
+}
+
+.hero h2 {
+    font-style: italic;
+    font-size: 2em;
+    padding: 10px;
+    border: 4px var(--bg-two) solid;
+    border-radius: 25px;
+    background-color: var(--color-three);
+}
+
+/* Section Headers */
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px 50px;
+}
+
+.section-head {
+    padding-top: 10px;
+}
+.section-title {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 15px 0 80px;
+}
+
+.contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 2;
+    border-left: 3px var(--bg-one) solid;
+}
+
+
+/* About Me section styles */
+
+.about-text {
+    font-size: 15px;
+    text-align: left;
+    line-height: 1.3;
+    margin-left: 30px;
+}
+
+/* Work section styles */
+
+.card {
+    margin: 0 15px;
+    flex: 2 25%;
+    justify-items: center;
+}
+.card img {
+    height: 200px;
+    width: 300px;
+} 
+
+.card-1 img {
+    height: 300px;
+    width: 600px;
+}
+
+.card-1 {
+    padding: 0 0 10px 25px;
+    flex: 1 100%;
+}
+
+
+/* Contact section styles */
+
+.contact-info {
+    margin: 0;
+}
+.contact-info ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+}
+
+.contact-info ul li {
+    margin: 0 50px;
+}
+
+/* footer styles */
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: var(--bg-one);
+    width: 100%;
+    padding: 10px 35px;
+}
+footer div {
+    line-height: 1.5;
+    text-align: right;
+    margin-top: 50px;
+}
+
+footer img {
+    height: 75px;
+    width: 60px;
+}
+
+/* MEDIA QUERIES */
+
+/* For small desktop screens */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-info img {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+/* For tablets and smaller */
+@media screen and (max-width: 768px) {
+    .section-head {
+        padding-top: 0px;
+    }
+    
+    .section-title {
+        margin-left: 20px;
+    }
+
+    .contact-info ul li {
+        margin: 0 25px;
+    }
+}
+
+/* For mobile phones and smaller */
+@media screen and (max-width: 575px) {
+
+    header nav ul {
+        font-size: .85em;
+    }
+    .contact-info ul li {
+        margin: 0 15px;
+    }
+}
