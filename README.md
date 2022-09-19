@@ -1,5 +1,5 @@
 # react-portfolio
-A professional portfolio of projects done in React.
+A professional portfolio of projects.
 
 ## Table of Contents
 1. [Project Description](#project-description)
@@ -46,10 +46,10 @@ WHEN I view the footer
 THEN I am presented with text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter)
 ```
 ## Usage
-This application is deployed at a live URL.
+This application will be deployed at a live URL.
 ### Deployed Application Demonstration
 
-[Deployed application](#)
+![Deployed application](./src/assets/images/Portfolio.gif)
 ## Built With
 * React
 
