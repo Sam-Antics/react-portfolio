@@ -1,13 +1,16 @@
 import React from "react";
+import pic from "../../assets/images/sam-avatar.png";
 
 const Nav = () => {
   return (
     <header>
-      <h2>
+      <h1>
         <a href="/">
-          <span role="img"></span> Sam-Antic Design
+          <span role="img" aria-label="Sam Avatar">
+            <img src={pic} />
+          </span>  Samantha Guerra 
         </a>
-      </h2>
+      </h1>
       <nav>
         <ul className="flex-row">
           <li>
@@ -16,13 +19,19 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <span>Portfolio</span>
+            <a href="#works">
+              Portfolio
+            </a>
           </li>
           <li>
-            <span>Contact</span>
+            <a href="#contact">
+              Contact
+            </a>
           </li>
           <li>
-            <span>Resume</span>
+            <a href="#resume">
+              Resume
+            </a>
           </li>
         </ul>
       </nav>
