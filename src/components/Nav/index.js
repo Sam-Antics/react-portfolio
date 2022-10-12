@@ -1,9 +1,10 @@
 import React from "react";
 import pic from "../../assets/images/sam-avatar.png";
+import coverImage from "../../assets/images/purple-glitter.jpg";
 
 const Nav = () => {
   return (
-    <header>
+    <header style={{ backgroundImage:`url(${coverImage})` }}>
       <h1>
         <a href="/">
           <span role="img" aria-label="Sam Avatar">
