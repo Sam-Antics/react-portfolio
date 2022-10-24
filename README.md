@@ -52,6 +52,7 @@ This application will be deployed at a live URL.
 ![Deployed application](./src/assets/images/Portfolio.gif)
 ## Built With
 * React
+* Material UI
 
 ## Author
 **Samantha Guerra**

@@ -9,11 +9,12 @@
     --main-text: rgb(7, 126, 136);
     --other-text: rgb(2, 9, 11);
     --bg-one: rgb(117, 75, 111);
-    --bg-two: rgb(211, 215, 218);
+    --bg-two: rgb(138, 145, 150);
     --color-three: rgb(40, 20, 48);
 }
 
 body {
+    background-color: var(--bg-one);
     color: var(--main-text);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -25,9 +26,7 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px 35px;
-    background-color: var(--bg-one);
     top: 0;
-    background-image: url(../images/Purple\ Glitter.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: 80%;
@@ -66,7 +65,7 @@ header nav ul li a {
 
 /* Main Content Styles */
 main {
-    background-color: var(--bg-two);
+    background-color: var(--bg-one);
 }
 
 section {
@@ -80,7 +79,6 @@ padding: 10px;
     flex-wrap: wrap;
     justify-content:space-around;
     align-items: center;
-    background-image: url(../images/Purple\ Glitter.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: 80%;
@@ -100,7 +98,7 @@ padding: 10px;
     padding: 10px;
     border: 4px var(--bg-two) solid;
     border-radius: 25px;
-    background-color: var(--color-three);
+    /* background-color: var(--color-three); */
 }
 
 /* Section Headers */

@@ -1,42 +1,120 @@
-import React from "react";
-import pic from "../../assets/images/sam-avatar.png";
+import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import MobileRightMenuSlider from '@material-ui/core/Drawer';
+import {
+  AppBar,
+  Toolbar,
+  ListItem,
+  IconButton,
+  ListItemText,
+  Avatar,
+  Divider,
+  List,
+  Typography,
+  Box,
+  ListItemIcon,
+} from '@material-ui/core';
+import {
+  ArrowBack,
+  AssignmentInd,
+  Home,
+  Apps,
+  ContactMail,
+} from '@material-ui/icons';
+import avatar from '../../assets/images/sam-avatar.png';
 
-const Nav = () => {
+// CSS STYLES
+const useStyles = makeStyles(theme => ({
+  menuSliderContainer: {
+    width: 250,
+    background: "rgb(7, 126, 136)",
+    height: "100%"
+  },
+  avatar: {
+    display: "block",
+    margin: "0.5rem auto",
+    width: theme.spacing(13),
+    height: theme.spacing(13)
+  },
+  listItem: {
+    color: "rgb(40, 20, 48)",
+  }
+}));
+
+const menuItems = [
+  {
+    listIcon: <Home />,
+    listText: "Home"
+  },
+  {
+    listIcon: <AssignmentInd />,
+    listText: "Resume"
+  },
+  {
+    listIcon: <Apps />,
+    listText: "Portfolio"
+  },
+  {
+    listIcon: <ContactMail />,
+    listText: "Contact"
+  },
+]
+
+const Navbar = () => {
+  const [state, setState] = useState({
+    right: false
+  });
+
+  const toggleSlider = (slider, open) => () => {
+    setState({ ...state, [slider]: open });
+  };
+  const classes = useStyles()
+
+  const sideList = slider => (
+      <Box 
+        className={classes.menuSliderContainer} 
+        component="div"
+        onClick={toggleSlider(slider, false)}
+      >
+        <Avatar className={classes.avatar} src={avatar} alt="Sam's Avatar" />
+        <Divider />
+        <List>
+          {menuItems.map((lsItem, key) => (
+
+          <ListItem button>
+            <ListItemIcon className={classes.listItem}>
+              {lsItem.listIcon}
+            </ListItemIcon>
+            <ListItemText className={classes.listItem} primary={lsItem.listText} />
+          </ListItem>
+          ))}
+        </List>
+      </Box>
+  )
+
   return (
-    <header>
-      <h1>
-        <a href="/">
-          <span role="img" aria-label="Sam Avatar">
-            <img src={pic} />
-          </span>  Samantha Guerra 
-        </a>
-      </h1>
-      <nav>
-        <ul className="flex-row">
-          <li>
-            <a href="#about">
-              About Me
-            </a>
-          </li>
-          <li>
-            <a href="#works">
-              Portfolio
-            </a>
-          </li>
-          <li>
-            <a href="#contact">
-              Contact
-            </a>
-          </li>
-          <li>
-            <a href="#resume">
-              Resume
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <>
+      <Box component="nav">
+        <AppBar position="static" style={{ background: 'rgb(122, 80, 150)' }}>
+          <Toolbar>
+            <IconButton onClick={toggleSlider("right", true)}>
+              <ArrowBack style={{ color: 'rgb(7, 126, 136)' }} />
+            </IconButton>
+            <Typography variant="h5" style={{ color: 'rgb(40, 20, 48' }}>
+              Design SamAntics
+            </Typography>
+            <MobileRightMenuSlider 
+             anchor="right"
+             open={state.right} 
+             onClose={toggleSlider("right", false)}
+            >
+              {sideList("right")}
+            </MobileRightMenuSlider>
+          </Toolbar>
+        </AppBar>
+      </Box>
+    </>
   );
-}
+};
 
-export default Nav;
+export default Navbar;
