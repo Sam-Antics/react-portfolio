@@ -1,17 +1,15 @@
 import React from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 // components
-import Nav from './components/Nav';
-import About from './components/About';
+import Home from './components/Home';
 
 const App = () => {
   return (
-    <div>
-      <Nav></Nav>
-      <main>
-        <About></About>
-      </main>
-    </div>
+    <>
+    <CssBaseline />
+      <Home />
+    </>
   );
 }
 
