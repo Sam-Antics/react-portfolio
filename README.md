@@ -53,6 +53,7 @@ This application will be deployed at a live URL.
 ## Built With
 * React
 * Material UI
+* typed.js
 
 ## Author
 **Samantha Guerra**
