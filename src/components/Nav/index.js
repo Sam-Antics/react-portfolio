@@ -95,13 +95,13 @@ const Navbar = () => {
   return (
     <>
       <Box component="nav">
-        <AppBar position="static" style={{ background: 'rgb(117, 75, 111)' }}>
+        <AppBar position="static" style={{ background: 'rgb(122, 80, 150)' }}>
           <Toolbar>
             <IconButton onClick={toggleSlider("right", true)}>
               <ArrowBack style={{ color: 'rgb(7, 126, 136)' }} />
             </IconButton>
             <Typography variant="h5" style={{ color: 'rgb(40, 20, 48' }}>
-              Portfolio
+              Design SamAntics
             </Typography>
             <MobileRightMenuSlider 
              anchor="right"
