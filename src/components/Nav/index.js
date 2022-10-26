@@ -83,7 +83,7 @@ const Navbar = () => {
         <Divider />
         <List>
           {menuItems.map((lsItem, key) => (
-          <ListItem button key={key} componenet={Link} to={lsItem.linkPath}>
+          <ListItem button key={key} component={Link} to={lsItem.listPath}>
             <ListItemIcon className={classes.listItem}>
               {lsItem.listIcon}
             </ListItemIcon>
