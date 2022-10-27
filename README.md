@@ -49,10 +49,11 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 This application will be deployed at a live URL.
 ### Deployed Application Demonstration
 
-![Deployed application](./src/assets/images/Portfolio.gif)
+![Deployed application](./src/assets/images/portfolio-demo.gif)
 ## Built With
 * React
 * Material UI
+* typed.js
 
 ## Author
 **Samantha Guerra**
