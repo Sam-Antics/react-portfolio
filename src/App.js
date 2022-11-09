@@ -6,6 +6,8 @@ import './App.css';
 // components
 import Home from './components/Home';
 import Resume from './components/Resume';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
     </Router>
