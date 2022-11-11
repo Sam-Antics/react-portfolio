@@ -29,8 +29,8 @@ const Footer = () => {
   return (
     <BottomNavigation className={classes.bottomRoot} >
       <BottomNavigationAction className={classes.root} label="Email" icon={<img src={email} />} />
-      <BottomNavigationAction label="GitHub" icon={<img src={github} />} />
-      <BottomNavigationAction label="LinkedIn" icon={<img src={linkedin} />} />
+      <BottomNavigationAction className={classes.root} label="GitHub" icon={<img src={github} />} />
+      <BottomNavigationAction className={classes.root} label="LinkedIn" icon={<img src={linkedin} />} />
     </BottomNavigation>
   )
 }
