@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import MobileRightMenuSlider from '@material-ui/core/Drawer';
+import Footer from '../Footer';
 import {
   AppBar,
   Toolbar,
@@ -22,9 +23,9 @@ import {
   Apps,
   ContactMail,
 } from '@material-ui/icons';
+
 import avatar from '../../assets/images/sam-avatar.png';
 
-// CSS STYLES
 const useStyles = makeStyles(theme => ({
   menuSliderContainer: {
     width: 250,
@@ -55,11 +56,13 @@ const menuItems = [
   },
   {
     listIcon: <Apps />,
-    listText: "Portfolio"
+    listText: "Portfolio",
+    listPath: "/portfolio"
   },
   {
     listIcon: <ContactMail />,
-    listText: "Contact"
+    listText: "Contact",
+    listPath: "/contact"
   },
 ]
 
@@ -111,6 +114,7 @@ const Navbar = () => {
              onClose={toggleSlider("right", false)}
             >
               {sideList("right")}
+              <Footer />
             </MobileRightMenuSlider>
           </Toolbar>
         </AppBar>
