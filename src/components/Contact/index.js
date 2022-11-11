@@ -48,7 +48,7 @@ const Contact = () => {
     <>
       <Navbar />
       <br/>
-      <Box component="div">
+      <Box component="div" style={{background: ""}}>
         <Grid container justify="center">
           <Box component="form" className={classes.form}>
             <Typography style={{ color: "rgb(7, 126, 136)" }} variant="h5">
